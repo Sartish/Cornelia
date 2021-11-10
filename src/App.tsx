@@ -20,7 +20,6 @@ function App() {
   return (
     <AppContainer>
       <TopSection />
-      <ArticlesSection />
    </AppContainer>
   );
 }

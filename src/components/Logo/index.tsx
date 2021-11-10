@@ -7,7 +7,7 @@ const LogoContainer = styled.div`
     ${tw`
         font-family['Varela', sans-serif]
         font-black
-        text-2xl
+        text-sm
         text-black
         `
     };
