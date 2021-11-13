@@ -13,6 +13,16 @@ const Container = styled.div`
         `
     };
 `
+const Header = styled.p`
+    ${tw`
+        font-family['Varela', sans-serif]
+        font-black
+        text-sm
+        text-black
+        `
+    };
+
+`
 
 const Image= styled.img`
     width: 300px;
@@ -39,6 +49,7 @@ const Contact = styled.p`
 export function Om() {
     return (
     <Container>
+        <Header>Conerlia Mikaelsson</Header>
         <Image src={profile}/>
         <Contact>
             <h2>Om</h2>

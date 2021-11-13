@@ -72,8 +72,38 @@ const WorkItems = styled.div`
     `};
 `;
 
-const Description = tw.p`
+const Overlay = styled.div`
+border: 2px black;
+width: 400px;
+height: 350px;
 
+  ${tw`
+    absolute
+    `};
+`;
+
+const OverlayText = styled.p`
+background-image: linear-gradient(rgba(255, 255, 0, 0.8), rgba(255, 255, 0, 0.8));
+cursor: pointer; 
+  ${tw`
+  opacity-0 
+  hover:opacity-100 duration-500 
+  absolute inset-0 z-10 
+  flex justify-center 
+  items-center 
+  text-4xl 
+  text-black 
+  font-semibold
+    `};
+`;
+
+
+const Description = styled.p`
+
+border: black solid 2px;
+  ${tw`
+  text-black
+    `};
 `;
 
 const Image= styled.img`
@@ -98,13 +128,16 @@ export function TopSection() {
                     <Om />
                     </AboutSection>
                     <WorkDisplayedSectionOne>
-                    <WorkItems>  
+                    <WorkItems> 
+                        <Overlay>
                         <Image src={ImgOne} />
+                        <OverlayText>Mer information som du vill ha</OverlayText>
                         <Description>
                             <p>Stefan Löfven avgår</p>
                             <p>2021.11.10 Sydsvenskan</p>
                         </Description>
-                        </WorkItems>
+                        </Overlay>
+                    </WorkItems>
                     <WorkItems> 
                         <Image src={ImgTwo} />
                         <Description>
