@@ -1,7 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 import tw from "twin.macro"
+import { Om } from "../../components/Om";
 import { NavBar } from "../../components/NavBar.tsx";
+
 
 //Images
 import ImgOne from "../../assets/one.jpeg";
@@ -16,97 +18,162 @@ import ImgEleven from "../../assets/eleven.jpeg";
 
 const TopSectionContainer = styled.div`
     ${tw `
-        w-full
-        flex
-        flex-col
-        h-screen
-        relative    
     `}
 
 `;
 
-const FirstpageSection = styled.div`
-${tw`
-    w-full
-    flex
-    flex-col
-`}
-
+const PageContainer= styled.div`
+    ${tw`
+        flex
+        flex-col
+        md:flex-row
+        lg:flex-row
+        justify-around
+        `
+    };
 `
 
-const WorkDisplayed = styled.div`
+
+const AboutSection= styled.div`
+    height: 750px;
+    border: black solid 2px;
+    ${tw`
+        `
+    };
+`
+
+
+const WorkDisplayedSectionOne = styled.div`
+  ${tw`
+    grid
+    grid-cols-1
+    md:grid-cols-2
+    lg:grid-cols-2
+    border-solid
+    gap-4
+    `};
+`;
+
+const WorkDisplayedSectionTwo = styled.div`
   ${tw`
     grid
     grid-cols-1
     md:grid-cols-3
-    lg:grid-cols-4
+    lg:grid-cols-3
     border-solid
     gap-4
-    space-x-4
     `};
 `;
 
+
 const WorkItems = styled.div`
   ${tw`
+     flex-1
     `};
 `;
 
 const Description = tw.p`
-    text-black
-    text-center
-    bg-black
-    bottom-10
-    left-1/2
-    pl-4
-    pr-4
-    pt-2
-    pb-2
-    rounded-2xl
-    opacity-80
-    transform[translateX(-50%)]
-    absolute
+
 `;
+
+const Image= styled.img`
+    width: 400px;
+    height: 350px;
+    ${tw`
+        font-family['Varela', sans-serif]
+        font-black
+        text-sm
+        text-black
+        `
+    };
+`
 
 
 export function TopSection() {
     return (
     <TopSectionContainer>
-        <FirstpageSection>
             <NavBar/>
-            <WorkDisplayed>
-                <WorkItems>  
-                    <img src={ImgOne} />
-                    <Description>About</Description></WorkItems>
-                <WorkItems> 
-                    <img src={ImgTwo} />
-                    <Description>About</Description>
-                </WorkItems>
-                <WorkItems> <img src={ImgThree} /><
-                Description>About</Description></WorkItems>
-                <WorkItems>
-                    <img src={ImgFour} />
-                    <Description>About</Description></WorkItems>
-                <WorkItems>
-                    <img src={ImgFive} />
-                    <Description>About</Description></WorkItems>
-                <WorkItems>
-                    <img src={ImgSix} />
-                    <Description>About</Description>
+                <PageContainer>
+                    <AboutSection>
+                    <Om />
+                    </AboutSection>
+                    <WorkDisplayedSectionOne>
+                    <WorkItems>  
+                        <Image src={ImgOne} />
+                        <Description>
+                            <p>Stefan Löfven avgår</p>
+                            <p>2021.11.10 Sydsvenskan</p>
+                        </Description>
+                        </WorkItems>
+                    <WorkItems> 
+                        <Image src={ImgTwo} />
+                        <Description>
+                            <p>Stefan Löfven avgår</p>
+                            <p>2021.11.10 Sydsvenskan</p>
+                        </Description>
+                    </WorkItems>
+                    <WorkItems> <Image src={ImgThree} /><
+                    Description>About</Description></WorkItems>
+                    <WorkItems>
+                        <Image src={ImgFour} />
+                        <Description>
+                            <p>Stefan Löfven avgår</p>
+                            <p>2021.11.10 Sydsvenskan</p>
+                        </Description>
+                    </WorkItems>
+                    </WorkDisplayedSectionOne>
+                </PageContainer>
+                <WorkDisplayedSectionTwo>
+                 <WorkItems>
+                    <Image src={ImgFive} />
+                    <Description>
+                        <p>Stefan Löfven avgår</p>
+                        <p>2021.11.10 Sydsvenskan</p>
+                    </Description>
                     </WorkItems>
                 <WorkItems>
-                    <img src={ImgSeven} />
-                    <Description>About</Description>
+                    <Image src={ImgSix} />
+                    <Description>
+                        <p>Stefan Löfven avgår</p>
+                        <p>2021.11.10 Sydsvenskan</p>
+                    </Description>
+                    </WorkItems>
+                <WorkItems>
+                    <Image src={ImgSeven} />
+                    <Description>
+                        <p>Stefan Löfven avgår</p>
+                        <p>2021.11.10 Sydsvenskan</p>
+                    </Description>
                 </WorkItems>
                 <WorkItems>
-                    <img src={ImgNine} />
-                    <Description>About</Description>
+                    <Image src={ImgNine} />
+                    <Description>
+                        <p>Stefan Löfven avgår</p>
+                        <p>2021.11.10 Sydsvenskan</p>
+                    </Description>
                 </WorkItems>
                 <WorkItems>
-                    <img src={ImgEleven} />
-                    <Description>About</Description>
+                    <Image src={ImgEleven} />
+                    <Description>
+                        <p>Stefan Löfven avgår</p>
+                        <p>2021.11.10 Sydsvenskan</p>
+                    </Description>
                 </WorkItems>
-            </WorkDisplayed>
-        </FirstpageSection>
+                <WorkItems>
+                    <Image src={ImgEleven} />
+                    <Description>
+                        <p>Stefan Löfven avgår</p>
+                        <p>2021.11.10 Sydsvenskan</p>
+                    </Description>
+                </WorkItems>
+                <WorkItems>
+                    <Image src={ImgEleven} />
+                    <Description>
+                        <p>Stefan Löfven avgår</p>
+                        <p>2021.11.10 Sydsvenskan</p>
+                    </Description>
+                </WorkItems>
+                </WorkDisplayedSectionTwo>
     </TopSectionContainer>
     )
 }
