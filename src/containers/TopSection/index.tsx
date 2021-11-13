@@ -17,10 +17,12 @@ import ImgNine from "../../assets/nine.jpeg";
 import ImgEleven from "../../assets/eleven.jpeg";
 
 const TopSectionContainer = styled.div`
-border: black solid 2px;
+border: red solid 2px;
   ${tw`
   flex
   flex-col
+  items-center
+  justify-center
     `};
 `;
 
@@ -78,8 +80,9 @@ const WorkDisplayedSectionTwo = styled.div`
     grid-cols-1
     md:grid-cols-3
     lg:grid-cols-3
-    border-solid
     gap-4
+    items-center
+    justify-center
     `};
 `;
 
