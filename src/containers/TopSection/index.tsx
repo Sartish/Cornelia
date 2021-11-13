@@ -17,9 +17,24 @@ import ImgNine from "../../assets/nine.jpeg";
 import ImgEleven from "../../assets/eleven.jpeg";
 
 const TopSectionContainer = styled.div`
-    ${tw `
-    `}
+border: black solid 2px;
+  ${tw`
+  flex
+  flex-col
+    `};
+`;
 
+
+const HeaderContainer = styled.div`
+margin-top: 50px;
+border: black solid 2px;
+  ${tw`
+  flex-row
+  justify-center
+  flex
+  md:hidden
+  lg:hidden
+    `};
 `;
 
 const PageContainer= styled.div`
@@ -35,8 +50,11 @@ const PageContainer= styled.div`
 
 
 const AboutSection= styled.div`
-    height: 750px;
+    height: 900px;
     border: black solid 2px;
+    @media (min-width: 768px) {
+    height: 750px;
+          }
     ${tw`
         `
     };
@@ -67,15 +85,29 @@ const WorkDisplayedSectionTwo = styled.div`
 
 
 const WorkItems = styled.div`
+height: 400px;
+width: 300px;
+border: black 2px solid;
+@media (min-width: 768px) {
+height: 400px;
+width: 450px;
+  }
   ${tw`
      flex-1
+     relative
+     items-center
+     justify-center
     `};
 `;
 
 const Overlay = styled.div`
 border: 2px black;
-width: 400px;
+width: 300px;
 height: 350px;
+@media (min-width: 768px) {
+    width: 400px;
+    height: 350px;
+    }
 
   ${tw`
     absolute
@@ -99,7 +131,6 @@ cursor: pointer;
 
 
 const Description = styled.p`
-
 border: black solid 2px;
   ${tw`
   text-black
@@ -107,13 +138,18 @@ border: black solid 2px;
 `;
 
 const Image= styled.img`
-    width: 400px;
+    width: 300px;
     height: 350px;
+    @media (min-width: 768px) {
+        width: 400px;
+        height: 350px;
+          }
     ${tw`
         font-family['Varela', sans-serif]
         font-black
         text-sm
         text-black
+        flex
         `
     };
 `
@@ -122,91 +158,148 @@ const Image= styled.img`
 export function TopSection() {
     return (
     <TopSectionContainer>
-            <NavBar/>
-                <PageContainer>
-                    <AboutSection>
-                    <Om />
-                    </AboutSection>
-                    <WorkDisplayedSectionOne>
-                    <WorkItems> 
-                        <Overlay>
-                        <Image src={ImgOne} />
-                        <OverlayText>Mer information som du vill ha</OverlayText>
-                        <Description>
-                            <p>Stefan Löfven avgår</p>
-                            <p>2021.11.10 Sydsvenskan</p>
-                        </Description>
-                        </Overlay>
-                    </WorkItems>
-                    <WorkItems> 
-                        <Image src={ImgTwo} />
-                        <Description>
-                            <p>Stefan Löfven avgår</p>
-                            <p>2021.11.10 Sydsvenskan</p>
-                        </Description>
-                    </WorkItems>
-                    <WorkItems> <Image src={ImgThree} /><
-                    Description>About</Description></WorkItems>
-                    <WorkItems>
-                        <Image src={ImgFour} />
-                        <Description>
-                            <p>Stefan Löfven avgår</p>
-                            <p>2021.11.10 Sydsvenskan</p>
-                        </Description>
-                    </WorkItems>
-                    </WorkDisplayedSectionOne>
-                </PageContainer>
-                <WorkDisplayedSectionTwo>
-                 <WorkItems>
-                    <Image src={ImgFive} />
+        <NavBar/>
+        <PageContainer>
+            <AboutSection>
+            <Om />
+            </AboutSection>
+            <HeaderContainer>
+            <h1>Articles</h1>
+        </HeaderContainer>
+            <WorkDisplayedSectionOne>
+            <WorkItems> 
+                <Overlay>
+                <Image src={ImgOne} />
+                <OverlayText>Mer information som du vill ha</OverlayText>
+                <Description>
+                    <p>Stefan Löfven avgår</p>
+                    <p>2021.11.10 Sydsvenskan</p>
+                </Description>
+                </Overlay>
+            </WorkItems>
+            <WorkItems> 
+            <Overlay>
+                <Image src={ImgOne} />
+                <OverlayText>Mer information som du vill ha</OverlayText>
+                <Description>
+                    <p>Stefan Löfven avgår</p>
+                    <p>2021.11.10 Sydsvenskan</p>
+                </Description>
+                </Overlay>
+            </WorkItems>
+            <WorkItems>      
+                <Overlay>
+                <Image src={ImgOne} />
+                    <OverlayText>Mer information som du vill ha</OverlayText>
                     <Description>
                         <p>Stefan Löfven avgår</p>
                         <p>2021.11.10 Sydsvenskan</p>
                     </Description>
-                    </WorkItems>
-                <WorkItems>
-                    <Image src={ImgSix} />
-                    <Description>
-                        <p>Stefan Löfven avgår</p>
-                        <p>2021.11.10 Sydsvenskan</p>
-                    </Description>
-                    </WorkItems>
-                <WorkItems>
-                    <Image src={ImgSeven} />
-                    <Description>
-                        <p>Stefan Löfven avgår</p>
-                        <p>2021.11.10 Sydsvenskan</p>
-                    </Description>
-                </WorkItems>
-                <WorkItems>
-                    <Image src={ImgNine} />
-                    <Description>
-                        <p>Stefan Löfven avgår</p>
-                        <p>2021.11.10 Sydsvenskan</p>
-                    </Description>
-                </WorkItems>
-                <WorkItems>
-                    <Image src={ImgEleven} />
-                    <Description>
-                        <p>Stefan Löfven avgår</p>
-                        <p>2021.11.10 Sydsvenskan</p>
-                    </Description>
-                </WorkItems>
-                <WorkItems>
-                    <Image src={ImgEleven} />
-                    <Description>
-                        <p>Stefan Löfven avgår</p>
-                        <p>2021.11.10 Sydsvenskan</p>
-                    </Description>
-                </WorkItems>
-                <WorkItems>
-                    <Image src={ImgEleven} />
-                    <Description>
-                        <p>Stefan Löfven avgår</p>
-                        <p>2021.11.10 Sydsvenskan</p>
-                    </Description>
-                </WorkItems>
-                </WorkDisplayedSectionTwo>
+                </Overlay></WorkItems>
+            <WorkItems>
+            <Overlay>
+                <Image src={ImgOne} />
+                <OverlayText>Mer information som du vill ha</OverlayText>
+                <Description>
+                    <p>Stefan Löfven avgår</p>
+                    <p>2021.11.10 Sydsvenskan</p>
+                </Description>
+                </Overlay>
+            </WorkItems>
+            </WorkDisplayedSectionOne>
+        </PageContainer>
+        <WorkDisplayedSectionTwo>
+            <WorkItems>
+            <Overlay>
+                <Image src={ImgOne} />
+                <OverlayText>Mer information som du vill ha</OverlayText>
+                <Description>
+                    <p>Stefan Löfven avgår</p>
+                    <p>2021.11.10 Sydsvenskan</p>
+                </Description>
+            </Overlay>
+            </WorkItems>
+        <WorkItems>
+        <Overlay>
+                <Image src={ImgOne} />
+                <OverlayText>Mer information som du vill ha</OverlayText>
+                <Description>
+                    <p>Stefan Löfven avgår</p>
+                    <p>2021.11.10 Sydsvenskan</p>
+                </Description>
+            </Overlay>
+            </WorkItems>
+        <WorkItems>
+        <Overlay>
+                <Image src={ImgOne} />
+                <OverlayText>Mer information som du vill ha</OverlayText>
+                <Description>
+                    <p>Stefan Löfven avgår</p>
+                    <p>2021.11.10 Sydsvenskan</p>
+                </Description>
+            </Overlay>
+        </WorkItems>
+        <WorkItems>
+        <Overlay>
+                <Image src={ImgOne} />
+                <OverlayText>Mer information som du vill ha</OverlayText>
+                <Description>
+                    <p>Stefan Löfven avgår</p>
+                    <p>2021.11.10 Sydsvenskan</p>
+                </Description>
+            </Overlay>
+        </WorkItems>
+        <WorkItems>
+        <Overlay>
+                <Image src={ImgOne} />
+                <OverlayText>Mer information som du vill ha</OverlayText>
+                <Description>
+                    <p>Stefan Löfven avgår</p>
+                    <p>2021.11.10 Sydsvenskan</p>
+                </Description>
+            </Overlay>
+        </WorkItems>
+        <WorkItems>
+        <Overlay>
+                <Image src={ImgOne} />
+                <OverlayText>Mer information som du vill ha</OverlayText>
+                <Description>
+                    <p>Stefan Löfven avgår</p>
+                    <p>2021.11.10 Sydsvenskan</p>
+                </Description>
+            </Overlay>
+        </WorkItems>
+        <WorkItems>
+            <Overlay>
+                <Image src={ImgOne} />
+                <OverlayText>Mer information som du vill ha</OverlayText>
+                <Description>
+                    <p>Stefan Löfven avgår</p>
+                    <p>2021.11.10 Sydsvenskan</p>
+                </Description>
+            </Overlay>
+        </WorkItems>
+        <WorkItems>
+            <Overlay>
+                <Image src={ImgOne} />
+                <OverlayText>Mer information som du vill ha</OverlayText>
+                <Description>
+                    <p>Stefan Löfven avgår</p>
+                    <p>2021.11.10 Sydsvenskan</p>
+                </Description>
+            </Overlay>
+        </WorkItems>
+        <WorkItems>
+            <Overlay>
+                <Image src={ImgOne} />
+                <OverlayText>Mer information som du vill ha</OverlayText>
+                <Description>
+                    <p>Stefan Löfven avgår</p>
+                    <p>2021.11.10 Sydsvenskan</p>
+                </Description>
+            </Overlay>
+        </WorkItems>
+        </WorkDisplayedSectionTwo>
     </TopSectionContainer>
     )
 }

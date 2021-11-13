@@ -5,10 +5,8 @@ import tw from "twin.macro"
 const LogoContainer = styled.div`
     width: 400px;
     ${tw`
-        font-family['Varela', sans-serif]
-        font-black
-        text-sm
         text-black
+        font-family['Varela', sans-serif]
         `
     };
 `

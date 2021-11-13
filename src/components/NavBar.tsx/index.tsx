@@ -11,7 +11,7 @@ import styles from "./menuStyles"
 const Container = styled.div`
 width: 90%;
     ${tw`
-        flex
+        hidden
         h-20
         pl-6
         pr-6
@@ -21,6 +21,8 @@ width: 90%;
         border-opacity-50
         items-center
         self-center
+        md:flex
+        lg:flex
     `};
 `
 
@@ -30,13 +32,15 @@ const NavItems = styled.ul`
         w-full
         h-full
         flex
-        justify-end
+        justify-around
         items-end
+
         `
     };
 `
 
 const NavItem = styled.li`
+margin-left: 120px;
     ${tw`
         font-family['Varela', sans-serif]
         lg:mr-8
@@ -45,10 +49,6 @@ const NavItem = styled.li`
         justify-end
         min-h-full
         text-black
-        cursor-pointer
-        font-medium
-        text-lg
-        lg:text-base
         transition-colors
         transition-duration[300ms]
         hover:text-gray-200
@@ -59,20 +59,16 @@ const NavItem = styled.li`
     };
 `
 
-
 export function NavBar() {
 
     const isMobile = useMediaQuery({ maxWidth: deviceSize.mobile})
 
     const navItems = (
         <NavItems>
-            <NavItem>
-                <Link to="About">About</Link>
-            </NavItem>
-            <NavItem>
-            <Link to="Home">Articles</Link>
-            </NavItem>
-            </NavItems>
+          <NavItem>
+              <h1>Articles</h1>
+          </NavItem>
+        </NavItems>
     )
 
     return (
