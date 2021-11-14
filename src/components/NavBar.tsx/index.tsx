@@ -37,7 +37,7 @@ const NavItems = styled.ul`
 `
 
 const NavItem = styled.li`
-margin-left: 255px;
+margin-left: 280px;
     ${tw`
         font-family['Varela', sans-serif]
         flex

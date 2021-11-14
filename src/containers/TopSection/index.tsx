@@ -18,20 +18,28 @@ import ImgSeven from "../../assets/seven.jpeg";
 import ImgNine from "../../assets/nine.jpeg";
 import ImgEleven from "../../assets/eleven.jpeg";
 
+const Wrapper = styled.div`
+margin: 0px;
+${tw`
+flex
+flex-col
+items-center
+justify-center
+  `};
+`;
+
+
 const TopSectionContainer = styled.div`
-margin: 20px;
   ${tw`
   flex
   flex-col
   items-center
   justify-center
-  w-screen
     `};
 `;
 
 
 const HeaderContainer = styled.div`
-margin-top: 50px;
   ${tw`
   flex-row
   justify-center
@@ -48,19 +56,28 @@ const PageContainer= styled.div`
         md:flex-row
         lg:flex-row
         justify-around
-        w-screen
         `
     };
 `
+const Header = styled.h1`
+padding: 10px;
+  ${tw`
+  md:hidden
+  lg:hidden
+  text-black
+    `};
+`;
 
 
 const AboutSection= styled.div`
-    height: 900px;
+    height: 750px;
     width: 300px;
+    margin-bottom: 20px;
     @media (min-width: 768px) {
     height: 750px;
     width: 440px;
-    margin-right: 30px;
+    margin-left: 25px;
+    margin-bottom: 0px;
           }
     ${tw`
         `
@@ -69,7 +86,7 @@ const AboutSection= styled.div`
 
 
 const WorkDisplayedSectionOne = styled.div`
-margin-bottom: 30px;
+height: 100%;
   ${tw`
     grid
     grid-cols-1
@@ -85,24 +102,25 @@ const WorkDisplayedSectionTwo = styled.div`
   ${tw`
     grid
     grid-cols-1
-    md:grid-cols-3
+    md:grid-cols-2
     lg:grid-cols-3
     gap-4
     items-center
-    justify-center
     `};
 `;
 
 
 const WorkItems = styled.div`
-height: 400px;
+height: 350px;
 width: 300px;
+margin-bottom: 0px;
 @media (min-width: 768px) {
-height: 400px;
+height: 350px;
 width: 450px;
+margin-bottom: 50px;
   }
   ${tw`
-     flex-1
+     flex
      relative
      items-center
      justify-center
@@ -111,11 +129,11 @@ width: 450px;
 
 const Overlay = styled.div`
 width: 300px;
-height: 350px;
+height: 300px;
 @media (min-width: 768px) {
     width: 400px;
     height: 350px;
-    }
+      }
 
   ${tw`
     absolute
@@ -129,7 +147,8 @@ cursor: pointer;
   opacity-0 
   hover:opacity-100 duration-500 
   absolute inset-0 z-10 
-  flex justify-center 
+  flex 
+  justify-center 
   items-center 
   text-2xl 
   text-black 
@@ -138,15 +157,15 @@ cursor: pointer;
 `;
 
 
-const Description = styled.p`
+const Description = styled.div`
   ${tw`
   text-black
     `};
 `;
 
 const Image= styled.img`
-    width: 300px;
-    height: 350px;
+    width: 100%;
+    height: 300px;
     @media (min-width: 768px) {
         width: 400px;
         height: 350px;
@@ -170,12 +189,13 @@ export function TopSection() {
     <TopSectionContainer>
         <NavBar/>
         <PageContainer>
+            <Header>Cornelia Mikaelsson</Header>
             <AboutSection>
             <Om />
             </AboutSection>
             <HeaderContainer>
             <h1>Articles</h1>
-        </HeaderContainer>
+            </HeaderContainer>
             <WorkDisplayedSectionOne>
             <WorkItems data-aos="fade-up"> 
                 <Overlay>
@@ -313,5 +333,6 @@ export function TopSection() {
         </WorkItems>
         </WorkDisplayedSectionTwo>
     </TopSectionContainer>
+
     )
 }

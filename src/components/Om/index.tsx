@@ -1,14 +1,13 @@
 import React from "react"
 import styled from "styled-components"
 import tw from "twin.macro"
-
 import profile from "../../assets/profile.jpg";
 
 const Container = styled.div`
 width: 300px;
 @media (min-width: 768px) {
-    width: 400px;
-    }
+    width:  350px;
+      }
     ${tw`
     flex 
     flex-wrap 
@@ -20,12 +19,7 @@ width: 300px;
 `
 
 const Image= styled.img`
-width: 300px;
-@media (min-width: 768px) {
-    width:  350px;
-    height: 500px;
-    }
-   
+    width: 100%;
     ${tw`
         font-family['Varela', sans-serif]
         font-black
@@ -36,7 +30,6 @@ width: 300px;
 `
 
 const Contact = styled.div`
-width: 350px;
     ${tw`
         font-family['Varela', sans-serif]
         text-black
