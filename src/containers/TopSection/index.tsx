@@ -87,6 +87,7 @@ const AboutSection= styled.div`
 
 const WorkDisplayedSectionOne = styled.div`
 height: 100%;
+
   ${tw`
     grid
     grid-cols-1
@@ -99,6 +100,10 @@ height: 100%;
 `;
 
 const WorkDisplayedSectionTwo = styled.div`
+margin-top: 0px;
+@media (min-width: 768px) {
+    margin-top: 30px;
+          }
   ${tw`
     grid
     grid-cols-1

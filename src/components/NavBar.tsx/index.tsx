@@ -9,10 +9,10 @@ import { slide as Menu } from "react-burger-menu"
 import styles from "./menuStyles"
 
 
+
 const Container = styled.div`
-width: 100%;
+width: 1200px;
     ${tw`
-        hidden
         h-20
         pl-6
         pr-6
@@ -64,7 +64,7 @@ export function NavBar() {
     )
 
     return (
-        <Container>
+        <Container> 
           <Logo />
           {isMobile && (
             <Menu right styles={styles}>
