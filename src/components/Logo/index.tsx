@@ -3,8 +3,8 @@ import styled from "styled-components"
 import tw from "twin.macro"
 
 const LogoContainer = styled.div`
-    border: black 2px solid;
     width: 200px;
+    margin-left:20px;
     ${tw`
         text-black
         font-family['Varela', sans-serif]

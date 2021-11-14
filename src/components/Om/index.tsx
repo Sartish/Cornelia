@@ -5,8 +5,10 @@ import tw from "twin.macro"
 import profile from "../../assets/profile.jpg";
 
 const Container = styled.div`
-border: yellow 2px solid;
-width: 400px;
+width: 300px;
+@media (min-width: 768px) {
+    width: 400px;
+    }
     ${tw`
     flex 
     flex-wrap 
@@ -18,8 +20,12 @@ width: 400px;
 `
 
 const Image= styled.img`
-    width: 400px;
-    height: 550px;
+width: 300px;
+@media (min-width: 768px) {
+    width:  350px;
+    height: 500px;
+    }
+   
     ${tw`
         font-family['Varela', sans-serif]
         font-black
@@ -30,6 +36,7 @@ const Image= styled.img`
 `
 
 const Contact = styled.div`
+width: 350px;
     ${tw`
         font-family['Varela', sans-serif]
         text-black

@@ -8,17 +8,15 @@ import { useMediaQuery } from "react-responsive"
 import { slide as Menu } from "react-burger-menu"
 import styles from "./menuStyles"
 
+
 const Container = styled.div`
-width: 90%;
+width: 100%;
     ${tw`
         hidden
         h-20
         pl-6
         pr-6
         pt-4
-        border-b-2
-        border-gray-200
-        border-opacity-50
         items-center
         self-center
         md:flex
@@ -39,8 +37,7 @@ const NavItems = styled.ul`
 `
 
 const NavItem = styled.li`
-border: black solid 2px;
-margin-left: 300px;
+margin-left: 255px;
     ${tw`
         font-family['Varela', sans-serif]
         flex

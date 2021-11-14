@@ -19,19 +19,19 @@ import ImgNine from "../../assets/nine.jpeg";
 import ImgEleven from "../../assets/eleven.jpeg";
 
 const TopSectionContainer = styled.div`
-border: red solid 2px;
+margin: 20px;
   ${tw`
   flex
   flex-col
   items-center
   justify-center
+  w-screen
     `};
 `;
 
 
 const HeaderContainer = styled.div`
 margin-top: 50px;
-border: black solid 2px;
   ${tw`
   flex-row
   justify-center
@@ -42,7 +42,6 @@ border: black solid 2px;
 `;
 
 const PageContainer= styled.div`
-    border: blue 2px solid;
     ${tw`
         flex
         flex-col
@@ -58,10 +57,9 @@ const PageContainer= styled.div`
 const AboutSection= styled.div`
     height: 900px;
     width: 300px;
-    border: black solid 2px;
     @media (min-width: 768px) {
     height: 750px;
-    width: 400px;
+    width: 440px;
     margin-right: 30px;
           }
     ${tw`
@@ -79,6 +77,7 @@ margin-bottom: 30px;
     lg:grid-cols-2
     border-solid
     gap-4
+    items-center
     `};
 `;
 
@@ -98,7 +97,6 @@ const WorkDisplayedSectionTwo = styled.div`
 const WorkItems = styled.div`
 height: 400px;
 width: 300px;
-border: black 2px solid;
 @media (min-width: 768px) {
 height: 400px;
 width: 450px;
@@ -112,7 +110,6 @@ width: 450px;
 `;
 
 const Overlay = styled.div`
-border: 2px black;
 width: 300px;
 height: 350px;
 @media (min-width: 768px) {
@@ -126,7 +123,7 @@ height: 350px;
 `;
 
 const OverlayText = styled.p`
-background-image: linear-gradient(rgba(255, 255, 0, 0.8), rgba(255, 255, 0, 0.8));
+background-image: linear-gradient(rgba(255,255,153, 0.8), rgba(255,255,153, 0.8));
 cursor: pointer; 
   ${tw`
   opacity-0 
@@ -134,7 +131,7 @@ cursor: pointer;
   absolute inset-0 z-10 
   flex justify-center 
   items-center 
-  text-4xl 
+  text-2xl 
   text-black 
   font-semibold
     `};
@@ -142,7 +139,6 @@ cursor: pointer;
 
 
 const Description = styled.p`
-border: black solid 2px;
   ${tw`
   text-black
     `};
@@ -181,10 +177,10 @@ export function TopSection() {
             <h1>Articles</h1>
         </HeaderContainer>
             <WorkDisplayedSectionOne>
-            <WorkItems> 
+            <WorkItems data-aos="fade-up"> 
                 <Overlay>
                 <a href="https://www.w3schools.com">
-                <Image data-aos="fade-down" src={ImgOne} />
+                <Image src={ImgOne} />
                 <OverlayText>Mer information som du vill ha</OverlayText>
                 <Description>
                     <p>Stefan Löfven avgår</p>
@@ -193,9 +189,9 @@ export function TopSection() {
                 </a>
                 </Overlay>
             </WorkItems>
-            <WorkItems> 
+            <WorkItems data-aos="fade-up" > 
             <Overlay>
-                <Image data-aos="fade-down" src={ImgOne} />
+                <Image src={ImgTwo} />
                 <OverlayText>Mer information som du vill ha</OverlayText>
                 <Description>
                     <p>Stefan Löfven avgår</p>
@@ -203,18 +199,18 @@ export function TopSection() {
                 </Description>
                 </Overlay>
             </WorkItems>
-            <WorkItems>      
+            <WorkItems data-aos="fade-up" >      
                 <Overlay>
-                <Image data-aos="fade-up" src={ImgOne} />
+                <Image src={ImgThree} />
                     <OverlayText>Mer information som du vill ha</OverlayText>
                     <Description>
                         <p>Stefan Löfven avgår</p>
                         <p>2021.11.10 Sydsvenskan</p>
                     </Description>
                 </Overlay></WorkItems>
-            <WorkItems>
+            <WorkItems data-aos="fade-up" >
             <Overlay>
-                <Image data-aos="fade-up" src={ImgOne} /> 
+                <Image src={ImgFour} /> 
                 <OverlayText>Mer information som du vill ha</OverlayText>
                 <Description>
                     <p>Stefan Löfven avgår</p>
@@ -225,9 +221,9 @@ export function TopSection() {
             </WorkDisplayedSectionOne>
         </PageContainer>
         <WorkDisplayedSectionTwo>
-            <WorkItems>
+            <WorkItems data-aos="fade-up" >
             <Overlay>
-                <Image data-aos="fade-up"  src={ImgOne} />
+                <Image src={ImgFive} />
                 <OverlayText>Mer information som du vill ha</OverlayText>
                 <Description>
                     <p>Stefan Löfven avgår</p>
@@ -235,9 +231,9 @@ export function TopSection() {
                 </Description>
             </Overlay>
             </WorkItems>
-        <WorkItems>
+        <WorkItems data-aos="fade-up">
         <Overlay>
-                <Image data-aos="fade-up" src={ImgOne} />
+                <Image src={ImgSix} />
                 <OverlayText>Mer information som du vill ha</OverlayText>
                 <Description>
                     <p>Stefan Löfven avgår</p>
@@ -245,9 +241,9 @@ export function TopSection() {
                 </Description>
             </Overlay>
             </WorkItems>
-        <WorkItems>
+        <WorkItems data-aos="fade-up">
         <Overlay>
-                <Image data-aos="fade-up" src={ImgOne} />
+                <Image src={ImgSeven} />
                 <OverlayText>Mer information som du vill ha</OverlayText>
                 <Description>
                     <p>Stefan Löfven avgår</p>
@@ -255,9 +251,9 @@ export function TopSection() {
                 </Description>
             </Overlay>
         </WorkItems>
-        <WorkItems>
+        <WorkItems data-aos="fade-up">
         <Overlay>
-                <Image data-aos="fade-up" src={ImgOne} />
+                <Image src={ImgOne} />
                 <OverlayText>Mer information som du vill ha</OverlayText>
                 <Description>
                     <p>Stefan Löfven avgår</p>
@@ -265,9 +261,9 @@ export function TopSection() {
                 </Description>
             </Overlay>
         </WorkItems>
-        <WorkItems>
+        <WorkItems data-aos="fade-up">
         <Overlay>
-                <Image data-aos="fade-up" src={ImgOne} />
+                <Image src={ImgOne} />
                 <OverlayText>Mer information som du vill ha</OverlayText>
                 <Description>
                     <p>Stefan Löfven avgår</p>
@@ -275,9 +271,9 @@ export function TopSection() {
                 </Description>
             </Overlay>
         </WorkItems>
-        <WorkItems>
+        <WorkItems data-aos="fade-up">
         <Overlay>
-                 <Image data-aos="fade-up" src={ImgOne} />
+                 <Image src={ImgOne} />
                 <OverlayText>Mer information som du vill ha</OverlayText>
                 <Description>
                     <p>Stefan Löfven avgår</p>
@@ -285,9 +281,9 @@ export function TopSection() {
                 </Description>
             </Overlay>
         </WorkItems>
-        <WorkItems>
+        <WorkItems data-aos="fade-up">
             <Overlay>
-                <Image data-aos="fade-up" src={ImgOne} />
+                <Image src={ImgOne} />
                 <OverlayText>Mer information som du vill ha</OverlayText>
                 <Description>
                     <p>Stefan Löfven avgår</p>
@@ -295,9 +291,9 @@ export function TopSection() {
                 </Description>
             </Overlay>
         </WorkItems>
-        <WorkItems>
+        <WorkItems data-aos="fade-up">
             <Overlay>
-                <Image data-aos="fade-up" src={ImgOne} />
+                <Image src={ImgOne} />
                 <OverlayText>Mer information som du vill ha</OverlayText>
                 <Description>
                     <p>Stefan Löfven avgår</p>
@@ -305,9 +301,9 @@ export function TopSection() {
                 </Description>
             </Overlay>
         </WorkItems>
-        <WorkItems>
+        <WorkItems data-aos="fade-up">
             <Overlay>
-                <Image data-aos="fade-up" src={ImgOne} />
+                <Image src={ImgOne} />
                 <OverlayText>Mer information som du vill ha</OverlayText>
                 <Description>
                     <p>Stefan Löfven avgår</p>
