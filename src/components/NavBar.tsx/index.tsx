@@ -13,6 +13,7 @@ import styles from "./menuStyles"
 const Container = styled.div`
 width: 1200px;
     ${tw`
+        hidden
         h-20
         pl-6
         pr-6
