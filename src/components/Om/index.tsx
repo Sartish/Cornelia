@@ -5,18 +5,21 @@ import tw from "twin.macro"
 import profile from "../../assets/profile.jpg";
 
 const Container = styled.div`
-width: 300px;
+border: yellow 2px solid;
+width: 400px;
     ${tw`
     flex 
     flex-wrap 
-    content-center
     flex-col
+    justify-center
+    items-center
         `
     };
 `
 
 const Image= styled.img`
-    width: 300px;
+    width: 400px;
+    height: 550px;
     ${tw`
         font-family['Varela', sans-serif]
         font-black
@@ -34,7 +37,6 @@ const Contact = styled.div`
     };
 
 `
-
 const Header = styled.h2`
     ${tw`
         font-family['Varela', sans-serif]
@@ -44,6 +46,16 @@ const Header = styled.h2`
 
 `
 
+const SocialMediaContainer = styled.h2`
+    ${tw`
+        font-family['Varela', sans-serif]
+        font-semibold
+        flex
+        flex-row
+        `
+    };
+
+`
 
 
 export function Om() {
@@ -52,10 +64,21 @@ export function Om() {
         <Image src={profile}/>
         <Contact>
             <Header>Om</Header>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sit amet leo tincidunt, vulputate nulla a, molestie mi. Fusce ac tempus dolor. Duis cursus at justo nec consectetur. Nulla aliquet eros sit amet enim imperdiet vehicula sed quis lacus. Duis lectus orci, molestie sed arcu et, semper porttitor odio. Suspendisse potenti. Cras nec pretium ante. Nulla dictum odio vulputate, aliquet mauris eget, rutrum mauris.</p>
-            <Header>Contact</Header>
+            <p>Nulla aliquet eros sit amet enim imperdiet vehicula sed quis lacus. Duis lectus orci, molestie sed arcu et, semper porttitor odio. Suspendisse potenti. Cras nec pretium ante. Nulla dictum odio vulputate, aliquet mauris eget, rutrum mauris.</p>
+            <Header>Kontakt</Header>
             <p>cornelia.mikaelsson@nosefornews.com</p>
             <p>999 99999</p>
+            <SocialMediaContainer>
+            <a href="https://www.instagram.com/corneliamikaelsson/">
+                <img src="https://img.icons8.com/ios-glyphs/30/000000/instagram-new.png"/>
+            </a>
+            <a href="https://www.instagram.com/corneliamikaelsson/">
+                <img src="https://img.icons8.com/ios-glyphs/30/000000/twitter.png"/>
+            </a>
+            <a href="https://www.linkedin.com/in/cornelia-mikaelsson-71674a99/">
+                <img src="https://img.icons8.com/ios-glyphs/30/000000/linkedin.png"/>
+            </a>
+            </SocialMediaContainer>
         </Contact>
     </Container>
     )

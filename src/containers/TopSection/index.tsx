@@ -40,12 +40,14 @@ border: black solid 2px;
 `;
 
 const PageContainer= styled.div`
+    border: blue 2px solid;
     ${tw`
         flex
         flex-col
         md:flex-row
         lg:flex-row
         justify-around
+        w-screen
         `
     };
 `
@@ -53,9 +55,12 @@ const PageContainer= styled.div`
 
 const AboutSection= styled.div`
     height: 900px;
+    width: 300px;
     border: black solid 2px;
     @media (min-width: 768px) {
     height: 750px;
+    width: 400px;
+    margin-right: 30px;
           }
     ${tw`
         `
@@ -64,10 +69,11 @@ const AboutSection= styled.div`
 
 
 const WorkDisplayedSectionOne = styled.div`
+margin-bottom: 30px;
   ${tw`
     grid
     grid-cols-1
-    md:grid-cols-2
+    md:grid-cols-1
     lg:grid-cols-2
     border-solid
     gap-4

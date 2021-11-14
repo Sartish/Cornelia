@@ -33,28 +33,23 @@ const NavItems = styled.ul`
         h-full
         flex
         justify-around
-        items-end
-
+        items-center
         `
     };
 `
 
 const NavItem = styled.li`
-margin-left: 120px;
+border: black solid 2px;
+margin-left: 300px;
     ${tw`
         font-family['Varela', sans-serif]
-        lg:mr-8
         flex
         items-center
-        justify-end
-        min-h-full
+        justify-center
         text-black
         transition-colors
         transition-duration[300ms]
         hover:text-gray-200
-        box-content
-        mb-2
-        lg:mb-0
       `
     };
 `
