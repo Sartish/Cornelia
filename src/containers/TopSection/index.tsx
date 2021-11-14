@@ -1,8 +1,10 @@
-import React from "react";
+import React, {useEffect} from "react";
 import styled from "styled-components";
 import tw from "twin.macro"
 import { Om } from "../../components/Om";
 import { NavBar } from "../../components/NavBar.tsx";
+import Aos from 'aos';
+import 'aos/dist/aos.css';
 
 
 //Images
@@ -165,6 +167,9 @@ const Image= styled.img`
 
 
 export function TopSection() {
+    useEffect(() => {
+        Aos.init({ duration: 2000 });
+      }, []);
     return (
     <TopSectionContainer>
         <NavBar/>
@@ -178,17 +183,19 @@ export function TopSection() {
             <WorkDisplayedSectionOne>
             <WorkItems> 
                 <Overlay>
-                <Image src={ImgOne} />
+                <a href="https://www.w3schools.com">
+                <Image data-aos="fade-down" src={ImgOne} />
                 <OverlayText>Mer information som du vill ha</OverlayText>
                 <Description>
                     <p>Stefan Löfven avgår</p>
                     <p>2021.11.10 Sydsvenskan</p>
                 </Description>
+                </a>
                 </Overlay>
             </WorkItems>
             <WorkItems> 
             <Overlay>
-                <Image src={ImgOne} />
+                <Image data-aos="fade-down" src={ImgOne} />
                 <OverlayText>Mer information som du vill ha</OverlayText>
                 <Description>
                     <p>Stefan Löfven avgår</p>
@@ -198,7 +205,7 @@ export function TopSection() {
             </WorkItems>
             <WorkItems>      
                 <Overlay>
-                <Image src={ImgOne} />
+                <Image data-aos="fade-up" src={ImgOne} />
                     <OverlayText>Mer information som du vill ha</OverlayText>
                     <Description>
                         <p>Stefan Löfven avgår</p>
@@ -207,7 +214,7 @@ export function TopSection() {
                 </Overlay></WorkItems>
             <WorkItems>
             <Overlay>
-                <Image src={ImgOne} />
+                <Image data-aos="fade-up" src={ImgOne} /> 
                 <OverlayText>Mer information som du vill ha</OverlayText>
                 <Description>
                     <p>Stefan Löfven avgår</p>
@@ -220,7 +227,7 @@ export function TopSection() {
         <WorkDisplayedSectionTwo>
             <WorkItems>
             <Overlay>
-                <Image src={ImgOne} />
+                <Image data-aos="fade-up"  src={ImgOne} />
                 <OverlayText>Mer information som du vill ha</OverlayText>
                 <Description>
                     <p>Stefan Löfven avgår</p>
@@ -230,7 +237,7 @@ export function TopSection() {
             </WorkItems>
         <WorkItems>
         <Overlay>
-                <Image src={ImgOne} />
+                <Image data-aos="fade-up" src={ImgOne} />
                 <OverlayText>Mer information som du vill ha</OverlayText>
                 <Description>
                     <p>Stefan Löfven avgår</p>
@@ -240,7 +247,7 @@ export function TopSection() {
             </WorkItems>
         <WorkItems>
         <Overlay>
-                <Image src={ImgOne} />
+                <Image data-aos="fade-up" src={ImgOne} />
                 <OverlayText>Mer information som du vill ha</OverlayText>
                 <Description>
                     <p>Stefan Löfven avgår</p>
@@ -250,7 +257,7 @@ export function TopSection() {
         </WorkItems>
         <WorkItems>
         <Overlay>
-                <Image src={ImgOne} />
+                <Image data-aos="fade-up" src={ImgOne} />
                 <OverlayText>Mer information som du vill ha</OverlayText>
                 <Description>
                     <p>Stefan Löfven avgår</p>
@@ -260,7 +267,7 @@ export function TopSection() {
         </WorkItems>
         <WorkItems>
         <Overlay>
-                <Image src={ImgOne} />
+                <Image data-aos="fade-up" src={ImgOne} />
                 <OverlayText>Mer information som du vill ha</OverlayText>
                 <Description>
                     <p>Stefan Löfven avgår</p>
@@ -270,7 +277,7 @@ export function TopSection() {
         </WorkItems>
         <WorkItems>
         <Overlay>
-                <Image src={ImgOne} />
+                 <Image data-aos="fade-up" src={ImgOne} />
                 <OverlayText>Mer information som du vill ha</OverlayText>
                 <Description>
                     <p>Stefan Löfven avgår</p>
@@ -280,7 +287,7 @@ export function TopSection() {
         </WorkItems>
         <WorkItems>
             <Overlay>
-                <Image src={ImgOne} />
+                <Image data-aos="fade-up" src={ImgOne} />
                 <OverlayText>Mer information som du vill ha</OverlayText>
                 <Description>
                     <p>Stefan Löfven avgår</p>
@@ -290,7 +297,7 @@ export function TopSection() {
         </WorkItems>
         <WorkItems>
             <Overlay>
-                <Image src={ImgOne} />
+                <Image data-aos="fade-up" src={ImgOne} />
                 <OverlayText>Mer information som du vill ha</OverlayText>
                 <Description>
                     <p>Stefan Löfven avgår</p>
@@ -300,7 +307,7 @@ export function TopSection() {
         </WorkItems>
         <WorkItems>
             <Overlay>
-                <Image src={ImgOne} />
+                <Image data-aos="fade-up" src={ImgOne} />
                 <OverlayText>Mer information som du vill ha</OverlayText>
                 <Description>
                     <p>Stefan Löfven avgår</p>
