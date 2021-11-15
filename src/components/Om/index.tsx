@@ -30,6 +30,8 @@ const Image= styled.img`
 `
 
 const Contact = styled.div`
+    margin-top: 10px;
+    line-height: 1,5em;
     ${tw`
         font-family['Varela', sans-serif]
         text-black
@@ -63,7 +65,6 @@ export function Om() {
     <Container>
         <Image src={profile}/>
         <Contact>
-            <Header>Om</Header>
             <p>Nulla aliquet eros sit amet enim imperdiet vehicula sed quis lacus. Duis lectus orci, molestie sed arcu et, semper porttitor odio. Suspendisse potenti. Cras nec pretium ante. Nulla dictum odio vulputate, aliquet mauris eget, rutrum mauris.</p>
             <Header>Kontakt</Header>
             <p>cornelia.mikaelsson@nosefornews.com</p>

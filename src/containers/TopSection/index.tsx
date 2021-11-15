@@ -146,7 +146,7 @@ height: 300px;
 `;
 
 const OverlayText = styled.p`
-background-image: linear-gradient(rgba(255,255,153, 0.8), rgba(255,255,153, 0.8));
+background-image: linear-gradient(rgba(237,237,237, 0.8), rgba(237,237,237, 0.8));
 cursor: pointer; 
   ${tw`
   opacity-0 
