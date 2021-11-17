@@ -30,6 +30,7 @@ justify-center
 
 
 const TopSectionContainer = styled.div`
+min-width: 100vh;
   ${tw`
   flex
   flex-col
@@ -50,13 +51,16 @@ const HeaderContainer = styled.div`
 `;
 
 const PageContainer= styled.div`
+border: black 2px solid;
     ${tw`
-        flex
-        flex-col
-        md:flex-row
-        lg:flex-row
-        justify-around
-        `
+    grid
+    grid-cols-1
+    md:grid-cols-2
+    lg:grid-cols-3
+    gap-4
+    auto-cols-max 
+    items-center
+    `
     };
 `
 const Header = styled.h1`
@@ -70,16 +74,19 @@ padding: 10px;
 
 
 const AboutSection= styled.div`
+    border: red solid 2px;
     height: 750px;
     width: 300px;
     margin-bottom: 20px;
     @media (min-width: 768px) {
-    height: 750px;
+    height: 820px;
     width: 440px;
-    margin-left: 25px;
     margin-bottom: 0px;
+    margin-left: 15px;
           }
     ${tw`
+    md:row-span-2
+    lg:row-span-2
         `
     };
 `
@@ -87,7 +94,6 @@ const AboutSection= styled.div`
 
 const WorkDisplayedSectionOne = styled.div`
 height: 100%;
-
   ${tw`
     grid
     grid-cols-1
@@ -116,6 +122,7 @@ margin-top: 0px;
 
 
 const WorkItems = styled.div`
+border: red solid 2px;
 height: 350px;
 width: 300px;
 margin-bottom: 0px;
@@ -139,7 +146,6 @@ height: 300px;
     width: 400px;
     height: 350px;
       }
-
   ${tw`
     absolute
     `};
@@ -191,17 +197,17 @@ export function TopSection() {
         Aos.init({ duration: 2000 });
       }, []);
     return (
+    <Wrapper>
     <TopSectionContainer>
         <NavBar/>
-        <PageContainer>
             <Header>Cornelia Mikaelsson</Header>
+            <PageContainer>
             <AboutSection>
             <Om />
             </AboutSection>
             <HeaderContainer>
             <h1>Articles</h1>
             </HeaderContainer>
-            <WorkDisplayedSectionOne>
             <WorkItems data-aos="fade-up"> 
                 <Overlay>
                 <a href="https://www.w3schools.com">
@@ -243,9 +249,6 @@ export function TopSection() {
                 </Description>
                 </Overlay>
             </WorkItems>
-            </WorkDisplayedSectionOne>
-        </PageContainer>
-        <WorkDisplayedSectionTwo>
             <WorkItems data-aos="fade-up" >
             <Overlay>
                 <Image src={ImgFive} />
@@ -336,8 +339,9 @@ export function TopSection() {
                 </Description>
             </Overlay>
         </WorkItems>
-        </WorkDisplayedSectionTwo>
+        </PageContainer>
     </TopSectionContainer>
+    </Wrapper>
 
     )
 }
