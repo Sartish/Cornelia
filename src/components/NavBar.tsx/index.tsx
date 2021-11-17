@@ -42,7 +42,7 @@ const NavItems = styled.ul`
 const NavItem = styled.li`
 width: 400px;
 margin-left: 110px;
-font-size: 15px;
+font-size: 18px;
     ${tw`
         font-family['Varela', sans-serif]
         flex

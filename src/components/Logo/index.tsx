@@ -8,11 +8,11 @@ const LogoContainer = styled.div`
     text-align: center;
     @media (min-width: 768px) {
         margin-left: 0px;
-        font-size: 15px;
+        font-size: 18px;
         }
         @media (min-width: 1024px) {
             margin-left: 60px;
-            font-size: 15px;
+            font-size: 18px;
             }
     ${tw`
         text-black
