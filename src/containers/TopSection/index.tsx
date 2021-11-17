@@ -44,6 +44,7 @@ const HeaderContainer = styled.div`
 margin-top: 20px;
 margin-bottom: -10px;
 text-align: center; 
+font-size: 20px;
     @media (min-width: 768px) {
     margin-top: 0px;
     margin-bottom: 10px;
