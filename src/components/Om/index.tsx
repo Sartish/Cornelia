@@ -5,13 +5,20 @@ import profile from "../../assets/profile.jpg";
 
 const Container = styled.div`
 width: 300px;
-@media (min-width: 768px) {
-    width:  350px;
-      }
+@media (min-width: 768px) {;
+    width: 200px;
+    margin-bottom: 0px;
+          }
+    @media (min-width: 1024px) {
+    height: 800px;
+    width: 400px;
+    margin-bottom: 0px;
+            }
     ${tw`
     flex 
-    flex-wrap 
     flex-col
+    md:flex-row
+    lg:flex-col
     justify-center
     items-center
         `

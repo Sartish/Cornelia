@@ -30,7 +30,7 @@ justify-center
 
 
 const TopSectionContainer = styled.div`
-min-width: 100vh;
+min-width: 100%;
   ${tw`
   flex
   flex-col
@@ -44,14 +44,12 @@ const HeaderContainer = styled.div`
   ${tw`
   flex-row
   justify-center
-  flex
   md:hidden
   lg:hidden
     `};
 `;
 
 const PageContainer= styled.div`
-border: black 2px solid;
     ${tw`
     grid
     grid-cols-1
@@ -74,19 +72,29 @@ padding: 10px;
 
 
 const AboutSection= styled.div`
-    border: red solid 2px;
     height: 750px;
     width: 300px;
     margin-bottom: 20px;
     @media (min-width: 768px) {
-    height: 820px;
-    width: 440px;
+    height: 350px;
+    width: 600px;
+    margin-bottom: 0px;
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+          }
+    @media (min-width: 1024px) {
+    height: 829px;
+    width: 450px;
     margin-bottom: 0px;
     margin-left: 15px;
-          }
+    
+            }
     ${tw`
+    md:col-span-2
     md:row-span-2
     lg:row-span-2
+    lg:col-span-1
         `
     };
 `
@@ -122,15 +130,20 @@ margin-top: 0px;
 
 
 const WorkItems = styled.div`
-border: red solid 2px;
 height: 350px;
 width: 300px;
 margin-bottom: 0px;
-@media (min-width: 768px) {
-height: 350px;
-width: 450px;
-margin-bottom: 50px;
-  }
+
+    @media (min-width: 768px) {
+    height: 250px;
+    width: 300px;
+    margin-bottom: 50px;
+    }
+    @media (min-width: 1024px) {
+    height: 350px;
+    width: 450px;
+    margin-bottom: 50px;
+        }
   ${tw`
      flex
      relative
@@ -143,9 +156,13 @@ const Overlay = styled.div`
 width: 300px;
 height: 300px;
 @media (min-width: 768px) {
+    width: 300px;
+    height: 250px;
+      }
+    @media (min-width: 1024px) {
     width: 400px;
     height: 350px;
-      }
+        }
   ${tw`
     absolute
     `};
@@ -175,12 +192,16 @@ const Description = styled.div`
 `;
 
 const Image= styled.img`
-    width: 100%;
-    height: 300px;
-    @media (min-width: 768px) {
-        width: 400px;
-        height: 350px;
-          }
+width: 300px;
+height: 300px;
+@media (min-width: 768px) {
+    width: 300px;
+    height: 250px;
+      }
+    @media (min-width: 1024px) {
+    width: 400px;
+    height: 350px;
+        }
     ${tw`
         font-family['Varela', sans-serif]
         font-black

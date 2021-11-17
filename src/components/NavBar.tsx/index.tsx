@@ -11,7 +11,7 @@ import styles from "./menuStyles"
 
 
 const Container = styled.div`
-width: 1200px;
+width: 70%;
     ${tw`
         hidden
         h-20
@@ -19,7 +19,7 @@ width: 1200px;
         pr-6
         pt-4
         items-center
-        self-center
+        justify-between
         md:flex
         lg:flex
     `};
@@ -55,6 +55,7 @@ margin-left: 280px;
 export function NavBar() {
 
     const isMobile = useMediaQuery({ maxWidth: deviceSize.mobile})
+    const isTablet = useMediaQuery({ maxWidth: deviceSize.tablet})
 
     const navItems = (
         <NavItems>
