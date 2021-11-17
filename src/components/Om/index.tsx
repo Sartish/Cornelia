@@ -35,9 +35,9 @@ height: 500px;
     margin-right: 20px;
         }
     @media (min-width: 1024px) {
-    width: 85%;
+    width: 700px;
     height: 500px;
-    margin-top -30px;
+    margin-top -60px;
     padding: 0px;
             }
     ${tw`
@@ -58,7 +58,9 @@ const Contact = styled.div`
     margin-top: -20px;
     }
     @media (min-width: 1024px) {
-        margin-top: 10px;        
+        margin-top: 10px; 
+        margin-right: 20px;   
+        width: 400px;   
     }
 
     ${tw`
