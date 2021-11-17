@@ -91,7 +91,7 @@ padding: 10px;
 
 
 const AboutSection= styled.div`
-    height: 750px;
+    height: 650px;
     width: 300px;
     margin-bottom: 20px;
     @media (min-width: 768px) {

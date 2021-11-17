@@ -12,7 +12,7 @@ width: 300px;
           }
     @media (min-width: 1024px) {
     width: 400px;
-    height: 800px;
+    height: 400px;
     margin-top: -30px
             }
     ${tw`
@@ -27,17 +27,17 @@ width: 300px;
 `
 
 const Image= styled.img`
-width: 100%;
-height: 500px;
+width: 300px;
+height: 400px;
     @media (min-width: 768px) {;
-    width: 750px;
+    width: 300px;
     height: 300px;
     margin-right: 20px;
         }
     @media (min-width: 1024px) {
-    width: 700px;
-    height: 500px;
-    margin-top -60px;
+    width: 300px;
+    height: 400px;
+    margin-top -110px;
     padding: 0px;
             }
     ${tw`
@@ -50,6 +50,7 @@ height: 500px;
 `
 
 const Contact = styled.div`
+    width: 300px;
     margin-top: 10px;
     line-height: 1,5em;
 
@@ -60,7 +61,7 @@ const Contact = styled.div`
     @media (min-width: 1024px) {
         margin-top: 10px; 
         margin-right: 20px;   
-        width: 400px;   
+        width: 300px;   
     }
 
     ${tw`
