@@ -11,9 +11,8 @@ width: 300px;
     margin-bottom: 0px;
           }
     @media (min-width: 1024px) {
-    width: 400px;
+    width: 300px;
     height: 400px;
-    margin-top: -30px
             }
     ${tw`
     flex 
@@ -35,11 +34,9 @@ height: 400px;
     margin-right: 20px;
         }
     @media (min-width: 1024px) {
-    width: 300px;
-    height: 400px;
-    margin-top -110px;
+    width: 280px;
     padding: 0px;
-            }
+        }
     ${tw`
         font-family['Varela', sans-serif]
         font-black
@@ -61,7 +58,7 @@ const Contact = styled.div`
     @media (min-width: 1024px) {
         margin-top: 10px; 
         margin-right: 20px;   
-        width: 300px;   
+        width: 280px;   
     }
 
     ${tw`

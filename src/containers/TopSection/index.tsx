@@ -58,7 +58,6 @@ font-size: 20px;
 `;
 
 const NavContainer = styled.div`
-    }
   ${tw`
   md:col-span-2
   md:row-span-1
@@ -74,7 +73,7 @@ const PageContainer= styled.div`
     grid-cols-1
     md:grid-cols-2
     lg:grid-cols-3
-    gap-4
+    gap-1
     auto-cols-max 
     items-center
     `
@@ -82,6 +81,7 @@ const PageContainer= styled.div`
 `
 const Header = styled.h1`
 padding: 10px;
+font-size: 18px;
   ${tw`
   md:hidden
   lg:hidden
@@ -94,6 +94,7 @@ const AboutSection= styled.div`
     height: 650px;
     width: 300px;
     margin-bottom: 20px;
+
     @media (min-width: 768px) {
     height: 350px;
     width: 600px;
@@ -103,12 +104,11 @@ const AboutSection= styled.div`
     align-items: center;
           }
     @media (min-width: 1024px) {
-    height: 829px;
-    width: 450px;
-    margin-bottom: 0px;
-    margin-left: 15px;
-    
-            }
+    height: 650px;
+    width: 300px;
+    margin-top: 20px;
+    }
+
     ${tw`
     md:col-span-2
     md:row-span-2
@@ -119,48 +119,17 @@ const AboutSection= styled.div`
 `
 
 
-const WorkDisplayedSectionOne = styled.div`
-height: 100%;
-  ${tw`
-    grid
-    grid-cols-1
-    md:grid-cols-1
-    lg:grid-cols-2
-    border-solid
-    gap-4
-    items-center
-    `};
-`;
-
-const WorkDisplayedSectionTwo = styled.div`
-margin-top: 0px;
-@media (min-width: 768px) {
-    margin-top: 30px;
-          }
-  ${tw`
-    grid
-    grid-cols-1
-    md:grid-cols-2
-    lg:grid-cols-3
-    gap-4
-    items-center
-    `};
-`;
-
-
-const WorkItems = styled.div`
+const WorkItems = styled.div` 
 height: 350px;
 width: 300px;
 margin-bottom: 0px;
     @media (min-width: 768px) {
     height: 250px;
     width: 300px;
-    margin-bottom: 50px;
     }
     @media (min-width: 1024px) {
-    height: 350px;
-    width: 450px;
-    margin-bottom: 50px;
+    height: 300px;
+    width: 300px;
         }
   ${tw`
      flex
@@ -175,11 +144,11 @@ width: 300px;
 height: 300px;
 @media (min-width: 768px) {
     width: 300px;
-    height: 250px;
+    height: 200px;
       }
     @media (min-width: 1024px) {
-    width: 400px;
-    height: 350px;
+    width: 300px;
+    height: 250px;
         }
   ${tw`
     absolute
@@ -214,11 +183,11 @@ width: 300px;
 height: 300px;
 @media (min-width: 768px) {
     width: 300px;
-    height: 250px;
+    height: 200px;
       }
     @media (min-width: 1024px) {
-    width: 400px;
-    height: 350px;
+    width: 300px;
+    height: 250px;
         }
     ${tw`
         font-family['Varela', sans-serif]

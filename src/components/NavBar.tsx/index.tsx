@@ -10,9 +10,16 @@ import styles from "./menuStyles"
 
 const Container = styled.div`
 width: 100%;
+margin-bottom: 0px;
+@media (min-width: 768px) {;
+  margin-bottom: 0px;
+      }
+@media (min-width: 1024px) {
+  margin-bottom: -30px;
+    }
     ${tw`
         hidden
-        h-20
+        h-10
         pl-6
         pr-6
         pt-4
@@ -40,8 +47,7 @@ const NavItems = styled.ul`
 `
 
 const NavItem = styled.li`
-width: 400px;
-margin-left: 110px;
+width: 500px;
 font-size: 18px;
     ${tw`
         font-family['Varela', sans-serif]
