@@ -41,13 +41,31 @@ min-width: 100%;
 
 
 const HeaderContainer = styled.div`
+margin-top: 20px;
+margin-bottom: -10px;
+text-align: center; 
+    @media (min-width: 768px) {
+    margin-top: 0px;
+    margin-bottom: 10px;
+    text-align: center; 
+    }
   ${tw`
-  flex-row
-  justify-center
-  md:hidden
+  md:col-span-2
   lg:hidden
+  font-family['Varela', sans-serif]
     `};
 `;
+
+const NavContainer = styled.div`
+    }
+  ${tw`
+  md:col-span-2
+  md:row-span-1
+  lg:col-span-3
+  lg:row-span-1
+    `};
+`;
+
 
 const PageContainer= styled.div`
     ${tw`
@@ -133,7 +151,6 @@ const WorkItems = styled.div`
 height: 350px;
 width: 300px;
 margin-bottom: 0px;
-
     @media (min-width: 768px) {
     height: 250px;
     width: 300px;
@@ -220,15 +237,15 @@ export function TopSection() {
     return (
     <Wrapper>
     <TopSectionContainer>
-        <NavBar/>
             <Header>Cornelia Mikaelsson</Header>
             <PageContainer>
+            <NavContainer>
+            <NavBar/>
+            </NavContainer>
             <AboutSection>
             <Om />
             </AboutSection>
-            <HeaderContainer>
-            <h1>Articles</h1>
-            </HeaderContainer>
+            <HeaderContainer>Artiklar</HeaderContainer>
             <WorkItems data-aos="fade-up"> 
                 <Overlay>
                 <a href="https://www.w3schools.com">
@@ -312,7 +329,7 @@ export function TopSection() {
         </WorkItems>
         <WorkItems data-aos="fade-up">
         <Overlay>
-                <Image src={ImgOne} />
+                <Image src={ImgNine} />
                 <OverlayText>Mer information som du vill ha</OverlayText>
                 <Description>
                     <p>Stefan Löfven avgår</p>
@@ -322,7 +339,7 @@ export function TopSection() {
         </WorkItems>
         <WorkItems data-aos="fade-up">
         <Overlay>
-                 <Image src={ImgOne} />
+                 <Image src={ImgEleven} />
                 <OverlayText>Mer information som du vill ha</OverlayText>
                 <Description>
                     <p>Stefan Löfven avgår</p>

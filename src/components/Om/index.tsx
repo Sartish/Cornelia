@@ -5,14 +5,15 @@ import profile from "../../assets/profile.jpg";
 
 const Container = styled.div`
 width: 300px;
+;
 @media (min-width: 768px) {;
-    width: 200px;
+    width: 600px;
     margin-bottom: 0px;
           }
     @media (min-width: 1024px) {
-    height: 800px;
     width: 400px;
-    margin-bottom: 0px;
+    height: 800px;
+    margin-top: -30px
             }
     ${tw`
     flex 
@@ -26,7 +27,19 @@ width: 300px;
 `
 
 const Image= styled.img`
-    width: 100%;
+width: 100%;
+height: 500px;
+    @media (min-width: 768px) {;
+    width: 750px;
+    height: 300px;
+    margin-right: 20px;
+        }
+    @media (min-width: 1024px) {
+    width: 85%;
+    height: 500px;
+    margin-top -30px;
+    padding: 0px;
+            }
     ${tw`
         font-family['Varela', sans-serif]
         font-black
@@ -39,6 +52,15 @@ const Image= styled.img`
 const Contact = styled.div`
     margin-top: 10px;
     line-height: 1,5em;
+
+    @media (min-width: 768px) {;
+    width: 350px;
+    margin-top: -20px;
+    }
+    @media (min-width: 1024px) {
+        margin-top: 10px;        
+    }
+
     ${tw`
         font-family['Varela', sans-serif]
         text-black
@@ -47,6 +69,7 @@ const Contact = styled.div`
 
 `
 const Header = styled.h2`
+    margin-top: 5px;
     ${tw`
         font-family['Varela', sans-serif]
         font-semibold

@@ -8,10 +8,8 @@ import { useMediaQuery } from "react-responsive"
 import { slide as Menu } from "react-burger-menu"
 import styles from "./menuStyles"
 
-
-
 const Container = styled.div`
-width: 70%;
+width: 100%;
     ${tw`
         hidden
         h-20
@@ -21,6 +19,7 @@ width: 70%;
         items-center
         justify-between
         md:flex
+        md:justify-center
         lg:flex
     `};
 `
@@ -33,12 +32,16 @@ const NavItems = styled.ul`
         flex
         justify-around
         items-center
+        md:hidden
+        lg:flex
+        md:justify-center
         `
     };
 `
 
 const NavItem = styled.li`
-margin-left: 280px;
+width: 400px;
+margin-left: 110px;
     ${tw`
         font-family['Varela', sans-serif]
         flex
@@ -48,6 +51,8 @@ margin-left: 280px;
         transition-colors
         transition-duration[300ms]
         hover:text-gray-200
+        md:hidden
+        lg:flex
       `
     };
 `
@@ -60,7 +65,7 @@ export function NavBar() {
     const navItems = (
         <NavItems>
           <NavItem>
-              <h1>Articles</h1>
+              Artiklar
           </NavItem>
         </NavItems>
     )
